@@ -1,0 +1,30 @@
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  .logo {
+    width: 150px;
+    .logo-img {
+      margin: 0 auto;
+    }
+  }
+
+  .toolbar-seprator {
+    flex: 1 1 auto;
+  }
+
+  .sidenav-container {
+    flex: 1 1 auto;
+    .sidenav {
+      width: 200px;
+      box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+    }
+
+    .sidenav-content {
+      .content {
+        margin: 10px 10px 10px 10px;
+      }
+    }
+  }
+}

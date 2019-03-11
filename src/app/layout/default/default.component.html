@@ -1,11 +1,81 @@
-<mat-sidenav-container>
-  <mat-sidenav mode="side" align="start" opened>
-    Sidenav content
-  </mat-sidenav>
-  <!-- Body -->
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-        <span>Title</span>
-    </mat-toolbar>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="main">
+  <mat-toolbar color="primary">
+    <a class="logo" href="/">
+      <img class="logo-img" src="./assets/images/logo.png">
+    </a>
+    <button mat-icon-button aria-label="侧边栏开关" (click)="drawer.toggle()">
+      <mat-icon aria-label="侧边栏开关图标">menu</mat-icon>
+    </button>
+    <span class="toolbar-seprator"></span>
+    <button mat-icon-button (click)="toggleFullscreen()">
+      <mat-icon>{{isFullscreen? 'fullscreen_exit' : 'fullscreen'}}</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #appMenu="matMenu">
+      <ng-template matMenuContent>
+        <button mat-menu-item>
+          <mat-icon>settings</mat-icon>
+          <span>设置</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>person</mat-icon>
+          <span>个人信息</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>退出</span>
+        </button>
+      </ng-template>
+    </mat-menu>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+      [attr.role]="(isHandset | async) ? 'dialog' : 'navigation'" [mode]="(isHandset | async) ? 'over' : 'side'"
+      [opened]="!(isHandset | async)">
+      <mat-nav-list class="menu-list">
+        <a mat-list-item href="#">菜单1</a>
+        <a mat-list-item href="#">菜单2</a>
+        <a mat-list-item href="#">菜单3</a>
+        <a mat-list-item href="#">菜单4</a>
+        <a mat-list-item href="#">菜单5</a>
+        <a mat-list-item href="#">菜单6</a>
+        <a mat-list-item href="#">菜单7</a>
+        <a mat-list-item href="#">菜单8</a>
+        <a mat-list-item href="#">菜单9</a>
+        <a mat-list-item href="#">菜单10</a>
+        <a mat-list-item href="#">菜单11</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <!-- Body -->
+    <mat-sidenav-content class="sidenav-content">
+
+      <div class="content">
+        <h1>内容</h1>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <p>到底了</p>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

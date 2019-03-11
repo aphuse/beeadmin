@@ -2,12 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
 
 // #region third libs
 const THIRDMODULES = [
+  LayoutModule,
+  MatButtonModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
   MatSidenavModule,
   MatToolbarModule,
+  
 ];
 // #endregion
 
