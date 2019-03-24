@@ -1,0 +1,29 @@
+.nav-item {
+  display: flex;
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  padding: 5px 6px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.item-icon {
+  margin: 0 6px;
+}
+
+span {
+  flex: 1 1 auto;
+}
+
+.nav-item:hover {
+  background-color: darkcyan;
+  //opacity: 0.5;
+  border-left: 2px solid white;
+}
+
+.nav-sub {
+  overflow: hidden;
+  margin: 5px 0 5px 15px;
+}
+

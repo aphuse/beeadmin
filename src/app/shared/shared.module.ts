@@ -2,7 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule } from '@angular/material';
+import {
+  MatSidenavModule,
+  MatToolbarModule,
+  MatListModule,
+  MatIconModule,
+  MatButtonModule,
+  MatMenuModule,
+  MatRippleModule
+} from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 
 // #region third libs
@@ -12,9 +20,9 @@ const THIRDMODULES = [
   MatIconModule,
   MatListModule,
   MatMenuModule,
+  MatRippleModule,
   MatSidenavModule,
-  MatToolbarModule,
-  
+  MatToolbarModule
 ];
 // #endregion
 
@@ -24,16 +32,13 @@ const DIRECTIVES = [];
 // #endregion
 
 @NgModule({
-  declarations: [
-    ...COMPONENTS,
-    ...DIRECTIVES,
-  ],
+  declarations: [...COMPONENTS, ...DIRECTIVES],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    ...THIRDMODULES,
+    ...THIRDMODULES
   ],
   exports: [
     CommonModule,
@@ -42,7 +47,7 @@ const DIRECTIVES = [];
     RouterModule,
     ...THIRDMODULES,
     ...COMPONENTS,
-    ...DIRECTIVES,
+    ...DIRECTIVES
   ]
 })
-export class SharedModule { }
+export class SharedModule {}
