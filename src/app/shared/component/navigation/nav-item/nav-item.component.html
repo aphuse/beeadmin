@@ -1,0 +1,22 @@
+<ng-container *ngIf="node.url; else elseTemplate">
+  <div class="nav-item" (click)="doClick()" [routerLink]="node.url" routerLinkActive="active" matRipple>
+    <ng-container *ngTemplateOutlet="itemContent"></ng-container>
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div class="nav-item" (click)="doClick()" matRipple>
+    <ng-container *ngTemplateOutlet="itemContent"></ng-container>
+  </div>
+</ng-template>
+
+
+<ng-container *ngIf="node.children">
+  <div class="nav-sub" [@slideInOut]="isExpend">
+    <app-navigation [nodes]="node.children"></app-navigation>
+  </div>
+</ng-container>
+<ng-template #itemContent>
+  <mat-icon class="item-icon">{{ node.icon }}</mat-icon>
+  <span>{{ node.title }}</span>
+  <mat-icon class="row-icon" *ngIf="node.children" [@rotate90]="isExpend">keyboard_arrow_right</mat-icon>
+</ng-template>

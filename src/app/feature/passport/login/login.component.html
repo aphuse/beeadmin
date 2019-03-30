@@ -1,0 +1,42 @@
+<div class="container" fxFlex="row" fxLayoutAlign="center center">
+    <mat-card>
+        <mat-card-header fxLayoutAlign="center center">
+            <mat-card-title fxLayout="column" fxLayoutAlign="center center">
+                <img class="logo-img" src="./assets/images/logo.png">
+                Beeadmin管理系统
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="12px" [formGroup]="loginForm"
+                (ngSubmit)="login()">
+                <mat-form-field>
+                    <input matInput placeholder="用户名" formControlName="name">
+                    <mat-icon matPrefix>account_box</mat-icon>
+                    <mat-error *ngIf="name.dirty && name.invalid">
+                        请输入用户名!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="密码" type="password" formControlName="password">
+                    <mat-icon matPrefix>vpn_key</mat-icon>
+                    <mat-error *ngIf="password.dirty && password.invalid">
+                        请输入密码!
+                    </mat-error>
+                </mat-form-field>
+                <button mat-flat-button color="primary" style="width:100%;" [disabled]="!loginForm.valid">登录</button>
+            </form>
+        </mat-card-content>
+        <mat-card-footer fxLayout="column" fxLayoutAlign="center center">
+            <mat-list fxLayout="row">
+                <a mat-list-item> 帮助 </a>
+                <a mat-list-item> 隐私 </a>
+                <a mat-list-item> 条款 </a>
+            </mat-list>
+            <mat-list>
+                <mat-list-item>
+                    Copyright &copy; <a href="//github.com/aphuse" target="_blank" color="primary"> aphuse</a>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-footer>
+    </mat-card>
+</div>

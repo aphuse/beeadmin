@@ -14,6 +14,7 @@ export class LayoutDefaultComponent implements OnInit {
     {
       title: '导航',
       icon: 'home',
+      url: '/',
     },
     {
       title: '系统管理',

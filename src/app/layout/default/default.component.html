@@ -33,6 +33,7 @@
       </ng-template>
     </mat-menu>
   </mat-toolbar>
+
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
       [attr.role]="(isHandset | async) ? 'dialog' : 'navigation'" [mode]="(isHandset | async) ? 'over' : 'side'"
@@ -43,25 +44,7 @@
     <mat-sidenav-content class="sidenav-content">
 
       <div class="content">
-        <h1>内容</h1>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <p>到底了</p>
+        <router-outlet></router-outlet>
       </div>
 
     </mat-sidenav-content>

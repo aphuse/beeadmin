@@ -1,0 +1,25 @@
+.breadcrumb {
+  .breadcrumb-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .breadcrumb-item {
+      display: inline-block;
+      position: relative;
+
+      & + .breadcrumb-item::before {
+        content: "/";
+        display: inline-block;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  a {
+    font-size: 14px;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}

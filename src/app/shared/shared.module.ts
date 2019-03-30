@@ -9,15 +9,26 @@ import {
   MatIconModule,
   MatButtonModule,
   MatMenuModule,
-  MatRippleModule
+  MatRippleModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatGridListModule,
+  MatCardModule
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedComponentModule } from './component/shared-component.module';
 
 // #region third libs
 const THIRDMODULES = [
+  FlexLayoutModule,
   LayoutModule,
   MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatGridListModule,
   MatIconModule,
+  MatInputModule,
   MatListModule,
   MatMenuModule,
   MatRippleModule,
@@ -31,6 +42,7 @@ const COMPONENTS = [];
 const DIRECTIVES = [];
 // #endregion
 
+
 @NgModule({
   declarations: [...COMPONENTS, ...DIRECTIVES],
   imports: [
@@ -38,7 +50,8 @@ const DIRECTIVES = [];
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    ...THIRDMODULES
+    ...THIRDMODULES,
+    SharedComponentModule
   ],
   exports: [
     CommonModule,
@@ -47,7 +60,8 @@ const DIRECTIVES = [];
     RouterModule,
     ...THIRDMODULES,
     ...COMPONENTS,
-    ...DIRECTIVES
+    ...DIRECTIVES,
+    SharedComponentModule
   ]
 })
 export class SharedModule {}

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Navigation } from '@app/core';
+import { Navigation } from './navigation.model';
 
 @Component({
   selector: 'app-navigation',

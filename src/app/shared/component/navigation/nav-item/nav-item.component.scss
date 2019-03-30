@@ -22,6 +22,10 @@ span {
   border-left: 2px solid white;
 }
 
+.nav-item.active {
+  background-color: darkcyan;
+}
+
 .nav-sub {
   overflow: hidden;
   margin: 5px 0 5px 15px;
